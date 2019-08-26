@@ -1,0 +1,42 @@
+<div class="card">
+    <h5 class="card-header">{{pageTitle}}</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                Fitter by:<br>
+                <h1>Fitter by:</h1>
+            </div>
+            <div class="col-2">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <br>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><button type="button" class="btn btn-primary" (click)='anhien()'>Hien image</button></th>
+                    <th>Product</th>
+                    <th>Code</th>
+                    <th>Available</th>
+                    <th>Thông Tin</th>                  
+                    <th>Price</th>
+                    <th>5 Star Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let p of listproduct'>
+                    <td><img src="assets\images\{{p.imageUrl}} " *ngIf="Isshow"></td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.productCode}}</td>
+                    <td>{{p.releaseDate}}</td>
+                   
+                    <td>{{p.price}}</td>
+                    <td>{{p.starRating}}</td>           
+                    <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+                </tr>
+               
+
+            </tbody>
+        </table>
+    </div>
+</div>

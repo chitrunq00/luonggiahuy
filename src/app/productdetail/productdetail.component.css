@@ -1,0 +1,7 @@
+.card-header {
+  background: rgb(167, 162, 162);
+  float: left;
+}
+.card-footer a i {
+    margin-right: 1.5%;
+}
