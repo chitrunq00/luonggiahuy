@@ -15,13 +15,25 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+              <tr *ngFor="let p of cart">
+                <td>{{p.cartID}}</td>
+                <td><img src="assets\images\{{p.cartImages}} "></td>
+                <td>{{p.cartName}}</td>
+                <td>{{p.cartPrice}}</td> 
+                <td>
+                {{p.sl}}                
+                      <button (click)="increase(p.IDcart)" type="button" class="btn btn-success">+</button>
+                      <button (click)="reduction(p.IDcart)" type="button" class="btn btn-danger">-</button>                  
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
               </tr>
-            
+              <tr>
+                <td colspan="5">Total Price:</td>
+                <td> {{TotalPrice(Price)|number}} </td>
+              </tr>
             </tbody>
           </table>
     </div>

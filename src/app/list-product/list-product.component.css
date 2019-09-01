@@ -1,4 +1,58 @@
 .table tr td img {
-    width:30px;
-     border: 1px solid
+    width:100px;
+    height: 50px;  
 }
+.td{
+    height: 80px;
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px solid black;   
+}
+table th td {
+    border: 1px solid black;   
+}
+td{
+    border: 1px solid black;   
+}
+
+.clearfix {
+    clear:both;
+  }
+  .text-center {text-align:center;}
+  a {
+    color: tomato;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #2196f3;
+  }
+  .star{
+    width: 19%;
+  }
+  /* Rating Star Widgets Style */
+  .rating-stars ul {
+    list-style-type:none;
+    padding:0;
+    
+    -moz-user-select:none;
+    -webkit-user-select:none;
+  }
+  .rating-stars ul > li.star {
+    display:inline-block;
+  
+  }
+  /* Idle State of the stars */
+  .rating-stars ul > li.star > i.fa {
+    font-size:2.5em; /* Change the size of the stars */
+    color:#ccc; /* Color on idle state */
+  }
+  
+  /* Hover state of the stars */
+  .rating-stars ul > li.star.hover > i.fa {
+    color:#FFCC36;
+  }
+
+  /* Selected state of the stars */
+  .rating-stars ul > li.star.selected > i.fa {
+    color:#FF912C;
+  }

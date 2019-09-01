@@ -14,29 +14,50 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th><button type="button" class="btn btn-primary" (click)='anhien()'>Hien image</button></th>
-                    <th>Product</th>
-                    <th>Code</th>
-                    <th>Available</th>
-                    <th>Thông Tin</th>                  
-                    <th>Price</th>
-                    <th>5 Star Rating</th>
+                    <th class="td"><button type="button" class="btn btn-primary" (click)='AnHien()'>Hien image</button></th>
+                    <th class="td">Product</th>
+                    <th class="td">Code</th>
+                    <th class="td">Available</th>                                  
+                    <th class="td">Price</th>
+                    <th class="td">5 Star Rating</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor='let p of listproduct'>
                     <td><img src="assets\images\{{p.imageUrl}} " *ngIf="Isshow"></td>
-                    <td>{{p.productName}}</td>
-                    <td>{{p.productCode}}</td>
-                    <td>{{p.releaseDate}}</td>
-                   
-                    <td>{{p.price}}</td>
-                    <td>{{p.starRating}}</td>           
-                    <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+                    <td class="td">{{p.productName}}</td>
+                    <td class="td">{{p.productCode}}</td>
+                    <td class="td">{{p.releaseDate}}</td>
+                    <td class="td">{{p.price}}</td>                       
+                    <td class="td">     
+                            <section class='rating-widget'>
+                                    <!-- Rating Stars Box -->
+                                    <div class='rating-stars text-center'>
+                                      <ul id='stars'>
+                                        <li class='star' title='Poor' data-value='1'>
+                                          <i class='fa fa-star fa-fw'></i>
+                                        </li>
+                                        <li class='star' title='Fair' data-value='2'>
+                                          <i class='fa fa-star fa-fw'></i>
+                                        </li>
+                                        <li class='star' title='Good' data-value='3'>
+                                          <i class='fa fa-star fa-fw'></i>
+                                        </li>
+                                        <li class='star' title='Excellent' data-value='4'>
+                                          <i class='fa fa-star fa-fw'></i>
+                                        </li>
+                                        <li class='star' title='WOW!!!' data-value='5'>
+                                          <i class='fa fa-star fa-fw'></i>
+                                        </li>
+                                      </ul>
+                                    </div>
+                              
+                                  </section>
+                        
+                    </td>
                 </tr>
-               
-
             </tbody>
         </table>
     </div>
+    
 </div>

@@ -1,0 +1,20 @@
+
+<div class="container">
+
+<table class="table">
+    <tr>
+        <th>Hình Ảnh</th>
+        <th>Họ Và Tên</th>
+        <th>Ngày sinh</th>
+        <th>Giới Tính</th>
+        <th>Điểm</th>
+    </tr>
+    <tr *ngFor='let p of students'>
+        <td> <img src="assets/images/{{p.photo}}" alt=""></td>
+        <td class="td">{{p.fullName}}</td>
+        <td class="td">{{p.birthday}}</td>
+        <td class="td">{{p.gender}}</td>
+        <td class="td">{{p.mark}}</td>     
+    </tr>
+</table>
+</div>

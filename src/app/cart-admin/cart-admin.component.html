@@ -15,7 +15,6 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 </head>
-
 <body>
     <div class="row">
         <div class="col-2">
@@ -81,11 +80,7 @@
                     </a>
                 </li>
             </ul>
-
         </div>
-
-
-
         <!-- sidebar-wrapper  -->
         <div class="col-10">
             <!--cai bang-->
@@ -100,8 +95,8 @@
                 </div>
                 <div class="container-1">
                     <span class="icon"><i class="fa fa-search"></i></span>
-                    <button class="btn btn-info">deleta</button>
-                    <button class="btn btn-info">edit</button>
+                    <button class="btn btn-info">Excel</button>
+                    <button class="btn btn-info">PDF</button>
                     <input type="search" id="search" />
                     <button class="btn btn-info">+Add teamplay</button>
                 </div>
@@ -118,61 +113,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Huy</td>
-                            <td>Luong</td>
-                            <td>luonggiahuy257@gmail.com</td>
+                        <tr *ngFor='let p of cartadmin'>
+                            
+                            <td> {{p.productId}} </td>
+                            <td> {{p.FirstName}} </td>
+                            <td>{{p.LastName}}</td>
+                            <td>{{p.Email}}</td>
                             <td class="actions" data-th="">
                                 <button class="btn btn-info btn-sm"><i class="fas fa-info"></i></button>
                                 <button class="btn btn-info btn-sm" style="margin: 0% 11%"><i class="fa fa-edit"></i></button>
                                 <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Tay</td>
-                            <td>Nguyễn</td>
-                            <td>nguyentay2355@gmail.com</td>
-                            <td class="actions" data-th="">
-                                    <button class="btn btn-info btn-sm"><i class="fas fa-info"></i></button>
-                                    <button class="btn btn-info btn-sm" style="margin: 0% 11%"><i class="fa fa-edit"></i></button>
-                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>trung</td>
-                            <td>Tấn</td>
-                            <td>tantrungtrung57@gmail.com</td>
-                            <td class="actions" data-th="">
-                                    <button class="btn btn-info btn-sm"><i class="fas fa-info"></i></button>
-                                    <button class="btn btn-info btn-sm" style="margin: 0% 11%"><i class="fa fa-edit"></i></button>
-                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Huy</td>
-                            <td>Quỳnh</td>
-                            <td>quynhquanghuy7@gmail.com</td>
-                            <td class="actions" data-th="">
-                                    <button class="btn btn-info btn-sm"><i class="fas fa-info"></i></button>
-                                    <button class="btn btn-info btn-sm" style="margin: 0% 11%"><i class="fa fa-edit"></i></button>
-                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                                <td>5</td>
-                                <td>xa</td>
-                                <td>Quỳnh</td>
-                                <td>quynhxalo447@gmail.com</td>
-                                <td class="actions" data-th="">
-                                        <button class="btn btn-info btn-sm"><i class="fas fa-info"></i></button>
-                                        <button class="btn btn-info btn-sm" style="margin: 0% 11%"><i class="fa fa-edit"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i></button>
-                                </td>
-                            </tr>
+                        </tr>             
                     </tbody>
                 </table>
             </div>
@@ -188,7 +140,5 @@
             </ul>
         </div>
     </div>
-    <div class="container"></div>
 </body>
-
 </html>
