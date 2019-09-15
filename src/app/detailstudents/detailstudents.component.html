@@ -1,0 +1,40 @@
+
+ <div class="header">
+    <a href="#">Home</a>/
+    <a href="#">Sinh Viên</a>
+</div>
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-table"></i> <h4>detail</h4>
+    </div>
+  <div class="noidung">
+    <h5>LastName</h5> 
+    {{sinhvien.LastName}} <br>
+    <h5>FirstName</h5>
+    {{sinhvien.FirstMidName}} <br>
+    <h5>EnrollData</h5>  
+    {{sinhvien.EnrollmentDate}} <br>
+  </div>
+   
+    <!-- table -->
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">courses Title</th>
+                    <th scope="col">Grade</th>
+                    <th scope="col">Credits</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>{{sinhvien.LastName}}</th>
+                    <!-- <th>{{sinhvien.[enrollments].Grade}}</th>      -->
+                    <th>{{sinhvien.enrollments.Grade}}</th>       
+                      <th>{{sinhvien.courses.Credits}}</th> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

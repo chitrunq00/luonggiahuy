@@ -15,7 +15,7 @@ export class YourCardComponent implements OnInit {
       "cartAction": "yes",
       "cartPrice": 100000,
       "cartImages": "laptop.jpg",
-      "sl": 1
+      "sl": 0
     },
     {
       "cartID": "pd101",
@@ -25,7 +25,7 @@ export class YourCardComponent implements OnInit {
       "cartAction": "yes",
       "cartPrice": 120000,
       "cartImages": "ipone.jpg",
-      "sl": 1
+      "sl": 0
     },
     {
       "cartID": "pd102",
@@ -35,7 +35,7 @@ export class YourCardComponent implements OnInit {
       "cartAction": "yes",
       "cartPrice": 110000,
       "cartImages": "tivi.jpg",
-      "sl": 1
+      "sl": 0
     },
     {
       "cartID": "pd103",
@@ -45,14 +45,14 @@ export class YourCardComponent implements OnInit {
       "cartAction": "yes",
       "cartPrice": 80000,
       "cartImages": "taipone.jpg",
-      "sl": 1
+      "sl": 0
     },
   ]
   constructor() { }
 
   ngOnInit() {
   }
-  TotalPrice(Price) {
+  TotalPrice() {
     let s = 0;
     this.cart.forEach(function (item) {
       s = s + item.cartPrice * item.sl

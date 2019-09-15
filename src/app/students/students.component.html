@@ -1,0 +1,49 @@
+<div class="header">
+    <a href="#">Home</a>/
+    <a href="#">Sinh Viên</a>
+</div>
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Danh sach Sinh vien
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">LastName</th>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">EnrollData</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let a of students'>
+                <!-- <tr *ngFor='let a of students |paginate: { itemsPerPage: 3, currentPage: p }'> -->
+                    <td>{{a.LastName}}</td>
+                    <td>{{a.FirstMidName}}</td>
+                    <td>{{a.EnrollmentDate}}</td>
+                    <td>
+                        <a [routerLink]="['/students',a.Id]"><button class="btn btn-info"><i
+                                    class="fa fa-info"></i></button></a>
+                        <button class="btn btn-danger" ><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- phan trang trai -->
+        <div class="paginations" >showing 1 of 3</div>
+        <!-- phan trang phai -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a> </li>
+                <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+            </ul>          
+        </nav>
+    </div>
+
+
+</div>

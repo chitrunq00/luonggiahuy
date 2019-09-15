@@ -1,0 +1,9 @@
+.table tr button {
+    margin: 0% 3%;
+}
+.pagination{
+    float: right;
+}
+.paginations{
+    float: left;
+}

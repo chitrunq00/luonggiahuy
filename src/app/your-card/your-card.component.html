@@ -1,40 +1,43 @@
 <div class="card">
-    <div class="card-header">
-      Quote
-    </div>
-    <div class="card-body">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Images</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quatity</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let p of cart">
-                <td>{{p.cartID}}</td>
-                <td><img src="assets\images\{{p.cartImages}} "></td>
-                <td>{{p.cartName}}</td>
-                <td>{{p.cartPrice}}</td> 
-                <td>
-                {{p.sl}}                
-                      <button (click)="increase(p.IDcart)" type="button" class="btn btn-success">+</button>
-                      <button (click)="reduction(p.IDcart)" type="button" class="btn btn-danger">-</button>                  
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary">View</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="5">Total Price:</td>
-                <td> {{TotalPrice(Price)|number}} </td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
+  <div class="card-header">
+    Quote
   </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Images</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quatity</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of cart">
+          <td>{{p.cartID}}</td>
+          <td><img src="assets\images\{{p.cartImages}} "></td>
+          <td>{{p.cartName}}</td>
+          <td>{{p.cartPrice}}</td>
+          <td>
+            {{p.sl}}
+            <button (click)="increase(p.IDcart)" type="button" class="btn btn-success">+</button>
+            <button (click)="reduction(p.IDcart)" type="button" class="btn btn-danger">-</button>
+          </td>
+          <td>
+            <!-- button1 -->
+            <button type="button" class="btn btn-primary" >View</button>
+           
+            <!-- button2 -->
+            <button type="button" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">Total Price:</td>
+          <td>{{TotalPrice()|number}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
