@@ -61,5 +61,14 @@ export class StudentsComponent implements OnInit {
       "EnrollmentDate": "2005-09-01",
     },
   ]
- 
+  delete(iddd){
+    var a = confirm ('bạn đã xóa thành công');
+    if ( a == true){
+      const index= this.students.findIndex( word => word.Id === iddd);
+      this.students.splice(index , 1);
+    } else {
+      return false;
+    }
+    
+  }
 }
