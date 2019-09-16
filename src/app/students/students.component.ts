@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class StudentsComponent implements OnInit {
-  pid;
+
+  p: number = 1;
   constructor() { }
   ngOnInit() {
   }
