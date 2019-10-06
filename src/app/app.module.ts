@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,10 @@ import { DetailstudentsComponent } from './detailstudents/detailstudents.compone
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Lab5Form11Component } from './lab5-form11/lab5-form11.component';
+import { Lab5Form12Component } from './lab5-form12/lab5-form12.component';
+import { Lab5Form2Component } from './lab5-form2/lab5-form2.component';
+import { Lab5Form3Component } from './lab5-form3/lab5-form3.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +33,14 @@ import { NgxPaginationModule } from 'ngx-pagination';
     StudentsComponent,
     DetailstudentsComponent,
     ShoppingCartComponent,
+    Lab5Form11Component,
+    Lab5Form12Component,
+    Lab5Form2Component,
+    Lab5Form3Component,
   ],
   imports: [
     NgxPaginationModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     // RouterModule.forRoot([ 
@@ -45,6 +55,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
       { path: '', component: StudentsComponent },
       { path: 'list-product', component: ListProductComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
+      { path: 'lab5form11', component: Lab5Form11Component },
+      { path: 'lab5form12', component: Lab5Form12Component },
+      { path: 'lab5form2', component: Lab5Form2Component },
+      { path: 'lab5form3', component: Lab5Form3Component },
       { path: 'list-product/:productId', component: ProductdetailComponent },
       { path: 'students', component: StudentsComponent },
       { path: 'detailstudents', component: StudentsComponent },

@@ -1,0 +1,21 @@
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">chiều dài</label>
+      <input type="number" [(ngModel)]='hcn.cd' [ngModelOptions]="{standalone: true}" class="form-control" >
+     </div>
+   
+     <div class="form-group">
+        <label for="exampleInputEmail1">chiều rong</label>
+        <input type="number" [(ngModel)]='hcn.cr' [ngModelOptions]="{standalone: true}" class="form-control" >
+       </div>
+       <div class="form-group">
+        <label for="exampleInputEmail1">diện tính</label>
+        <input type="number" [(ngModel)]='hcn.dt' [ngModelOptions]="{standalone: true}" class="form-control" >
+       </div>
+       <div class="form-group">
+        <label for="exampleInputEmail1">chu vi</label>
+        <input type="number" [(ngModel)]='hcn.cv' [ngModelOptions]="{standalone: true}" class="form-control" >
+       </div>
+    <button type="button" (click)='tinh()' class="btn btn-primary">Tính</button>
+  </form>
+

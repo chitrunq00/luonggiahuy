@@ -1,0 +1,32 @@
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Họ và Tên</label>
+      <input type="text" [(ngModel)]='sinhvien.hovaten' [ngModelOptions]="{standalone: true}" class="form-control" >
+     </div>
+   
+     <div class="form-group">
+        <label for="exampleInputEmail1">Ngày Sinh</label>
+        <input type="date" [(ngModel)]='sinhvien.ngaysinh' [ngModelOptions]="{standalone: true}" class="form-control" >
+       </div>
+       <div class="form-group">
+        <label >giới tính</label>
+        <select class="form-control" [(ngModel)]='sinhvien.gioitinh' [ngModelOptions]="{standalone: true}" >
+          <option>nu</option>
+          <option>nam</option>
+         
+        </select>
+      </div>
+       <div class="form-group">
+        <label for="exampleInputEmail1">điểm</label>
+        <input type="number" [(ngModel)]='sinhvien.diem' [ngModelOptions]="{standalone: true}" class="form-control" >
+       </div>
+
+       <div class="form-group">
+        <label for="exampleInputEmail1">học lực</label>
+        <div class="alert alert-primary" role="alert">
+            {{sinhvien.hocluc}}
+          </div>
+        </div>
+       
+    <button type="button" (click)='xeploai()' class="btn btn-primary">xep loai</button>
+  </form>

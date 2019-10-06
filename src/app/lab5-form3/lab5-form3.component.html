@@ -1,0 +1,23 @@
+<div class="card">
+    <h5 class="card-header">BÁN HÀNG GIẢI KHÁT</h5>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">tên hàng</th>
+            <th scope="col">số lượng</th>
+            <th scope="col">đơn giá</th>
+            <th scope="col">thành tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = 'let a of danhsach'>         
+            <td> <input type="checkbox" >{{a.ten}}</td>
+            <td> <input type="number"  [(ngModel)]="a.soluong"[ngModelOptions]="{standalone: true}" ></td>
+            <td> {{a.dongia || number}}</td>
+            <td >{{thanhtien()}}</td>
+          </tr>    
+          <a href="" lock>tinh</a>
+        </tbody>
+      </table>
+      <h5 class="card-header">TỔNG TIÊN:</h5>
+  </div>
