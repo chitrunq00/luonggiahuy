@@ -1,0 +1,37 @@
+<div class="card shopping-cart">
+    <table class="table text-center">
+            <thead >
+              <tr class="bg-info">
+                <th scope="col">item</th>
+                <th scope="col">price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody >              
+              <tr *ngFor='let item of guitars'>                            
+                <td>{{item.productname}}</td>               
+                <td>{{item.price | number}}</td>               
+                <td>
+                  <button class="bunton1" (click)="increase(item.cid)" type="button" class="btn btn-success">+</button>
+                  {{item.sl}}
+                  <button class="bunton1" (click)="reduction(item.cid)" type="button" class="btn btn-danger">-</button>
+                </td>               
+                <td><button  (click)='delete(guitars)' type="button" class="btn btn-danger">   <i class="fa fa-trash"></i>  </button>
+                
+                </td>                   
+              </tr>
+              <tr>
+                <td colspan="3">Total Price:</td>
+                <td>{{TotalPrice()|number}}</td>
+              </tr>
+              <!-- <tr>     
+                <td>Jacob</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr> -->
+            
+            </tbody>
+          </table>   
+</div>

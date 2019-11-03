@@ -1,0 +1,23 @@
+<h3 style="text-align: left;">shop guitar</h3>
+<div class="row">
+    <div class="col-md-3">
+        <img src="assets/images/{{product.imagesurl}}" alt="">
+    </div>
+    <div class="col-md-9">
+            Name: {{product.productname}} <br>
+            listPrice: {{product.price | number}}<br>
+            discount:{{product.discount}}<br>          
+            quantity:      
+            <input type="number">
+            <button  (click)='addToCart(product)'>add to cart</button> <br>
+            <h5>deresiption:</h5>
+          <p>{{product.description}}</p>
+          <h6>New features</h6>
+          <ul>
+              <li *ngFor='let f of features'> {{f.text}} </li>
+          </ul>
+    </div>
+</div>
+
+
+ 

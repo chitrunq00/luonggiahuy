@@ -1,0 +1,52 @@
+
+
+  <div class="card">
+    <div class="card-header" style="box-shadow: 0 4px 2px -3px;">
+        <h1>shop Guitar</h1>
+    </div>
+    <div class="card-body">
+        <div class="row">
+          <!-- noi dung trai -->
+          <div class="col-md-2">        
+                  <nav class="nav flex-column">
+                      <ul>
+                          <a href="#" style="color: sandybrown;"><li>Links</li></a> 
+                          <ul style="list-style: none; margin-left: -7%;">
+                         <!-- <a href=""(click)='LoadData()'><li>View Cart</li></a> -->
+                         <a [routerLink]="['/home']"><li>View all Cart</li></a>
+                         <a href=""><li>Login/Register</li></a>
+                         <a href=""><li>Home</li></a>       
+                         <a [routerLink]="['/yourcart']"><li>yourcart</li></a>       
+                          </ul>
+                      </ul>
+                  </nav>
+                  <nav class="nav flex-column">
+                      <ul>
+                          <a href="#" style="color: sandybrown; text-decoration: none;"><li>Categories</li></a> 
+                          <ul style="list-style: none; margin-left: -7%;" *ngFor='let a of categories'>
+                         <a [routerLink]="['/home']"><li>{{a.catename}}</li></a>
+                        
+                          </ul>
+                      </ul>
+                  </nav>
+                  <nav class="nav flex-column">
+                      <ul>
+                          <a href="#" style="color: sandybrown; text-decoration: none;"><li>Temp Link</li></a> 
+                          <ul style="list-style: none; margin-left: -7%;">
+                         <a href=""><li>Admin</li></a>                  
+                          </ul>
+                      </ul>
+                  </nav>
+                
+          </div>
+          <!-- noi dung phai -->
+          <div class="col-md-10">
+              <router-outlet></router-outlet>
+          </div>
+            
+        </div>
+    </div>
+    <div class="card-footer" style="text-align: right;">
+        <b>2010 My Guitar Shop.</b>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+ul{
+    text-decoration: none;
+    list-style: none; 	
+    font-family: Helvetica, Arial, Tahoma, sans-serif;
+}
+ ul li:hover{
+    color: blueviolet;
+} 
+.col-md-2{
+    background: #c1e7e0 ;
+}
