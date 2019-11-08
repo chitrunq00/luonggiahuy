@@ -1,0 +1,44 @@
+<!-- <span>time elapsed:{{ displaytime()}}</span> -->
+<!-- //<countdown #cd [config]="{leftTime: 300}" (finished)="finishTest()">$!m!:$!s!</countdown> -->
+<div class="progress">
+    <div class="determinate"></div>
+</div>
+<div class="card">
+    <h5 class="card-header"><i class="fa fa-table"></i>Please answer the following question?</h5>
+    <div class="card-body">
+        <div class="questions">
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <app-dmmh></app-dmmh>
+            </div>
+          <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-6">
+                        <div class="noidung" *ngFor='let a of quiz| paginate: { itemsPerPage:1,currentPage:curpage }'>
+                            {{a.Text}} <br>
+                            <ul *ngFor='let f of a.Answers'>
+                                <li>
+                                        <input  class="form-check-input" type="radio"> {{f.Text}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 imgess">
+                        <img src="assets/images/traidat.jpg" alt="">
+                    </div>
+                  
+                </div>
+                <h5 class="card-footer text-center">
+                        <pagination-controls (pageChange)="curpage = $event"></pagination-controls>
+                    </h5>
+          </div>
+        </div>
+        <!-- end row -->
+       
+        <h5 class="card-footer text-center">
+            <i class="fa fa-hand-o-right"  ></i>
+        </h5>
+    </div>
+    <h5 class="card-footer">đáp án</h5>
+</div>
