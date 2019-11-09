@@ -10,9 +10,7 @@ export class DmmhComponent implements OnInit {
   public Subjects:shomepage[];
   Subject:any;
   pid;
-  
   constructor(private _homepage:HomepageService) { }
-
   ngOnInit() {
     this._homepage.getAllSubjects().subscribe(data => this.Subjects = data);
     this.Subject= this.Subjects.find(p=>p.Id=== this.pid); 

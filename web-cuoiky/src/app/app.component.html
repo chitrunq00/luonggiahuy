@@ -1,57 +1,13 @@
- <!-- <router-outlet></router-outlet> 
- <app-home-page></app-home-page>
-<app-detail-questions></app-detail-questions>
-<app-password-reset></app-password-reset>
-<app-change-password></app-change-password> 
- <app-edit-password></app-edit-password>  -->
-<!-- <app-login></app-login> -->
+
 
       
         <div class="header">
                 <img src="assets/images/banner.png" alt="">
             </div>
             <!-- menu -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-        
-                <div class="bentrai">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"[routerLink]="['/introduce']">Giới thiệu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/contact']">Liên hệ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Góp ý</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/answar']">Hỏi đáp</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="benphai">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tài Khoản
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" [routerLink]="['/registration']">Đăng ký</a>
-                            <a class="dropdown-item" [routerLink]="['/login']">Đăng nhập</a>
-                            <a class="dropdown-item" [routerLink]="['/password-reset']">Quên mật khẩu</a>
-                            <hr>
-                            <a class="dropdown-item" href="#">Đăng xuất</a>
-                            <a class="dropdown-item" [routerLink]="['/change-password']">Đổi mật khẩu</a>
-                            <a class="dropdown-item" [routerLink]="['/edit-password']">Cập nhập tài khoản</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-           
-               <router-outlet></router-outlet> 
+ 
+            <app-nav></app-nav>           
+            <router-outlet></router-outlet> 
             <!-- Footer -->
             <footer class="page-footer font-small blue pt-4 bg-info">
                 <!-- Footer Links -->
@@ -115,9 +71,9 @@
                 <!-- Footer Links -->
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                    <a href="https://luonggiahuy257.epizy.com">luonggiahuy257.epizy.com</a>
+                    <a href="http://luonggiahuy257lab5.epizy.com">luonggiahuy257.epizy.com</a>
                 </div>
                 <!-- Copyright -->
-        
+   
             </footer>
             <!-- Footer -->

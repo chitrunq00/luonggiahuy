@@ -2,60 +2,25 @@
 <div class="row">
     <!-- ben trai -->
     <div class="col-md-9">
-        <div class="col-md-5">
+
+        <div class="col-md-5" *ngFor='let a of Subjects |  paginate: { itemsPerPage: 4, currentPage: currpage }'>
             <div class="card h-100">
                 <div class="card-body">
-                    <h2 class="card-title">Lập trình Android</h2>
-                    <img src="assets/images/INMA.jpg" alt="">
+                 <a [routerLink]="['/detail-questions',a.Id]">   <h2 class="card-title">{{a.Name}}</h2></a>
+                    <div class="container">
+                        <img src="assets/images/{{a.Logo}}" alt="">
+                    </div>
                 </div>
                 <div class="card-footer">
-                        <a href="#"> <h5>Start questions</h5></a>  
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-5">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">Lập trình Android</h2>
-                    <img src="assets/images/ADBS.jpg" alt="">
-                </div>
-                <div class="card-footer">
-                 <a href="#"> <h5>Start questions</h5></a>  
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-5">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">Lập trình Android</h2>
-                    <img src="assets/images/JABS.png" alt="">
-                </div>
-                <div class="card-footer">
-                        <a href="#"> <h5>Start questions</h5></a>  
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-5">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">Lập trình Android</h2>
-                    <img src="assets/images/JSPR.png" alt="">
-                </div>
-                <div class="card-footer">
-                        <a href="#"> <h5>Start questions</h5></a>  
+                    <a [routerLink]="['/detail-questions']">
+                        <h5>Start questions</h5>
+                    </a>
                 </div>
             </div>
         </div>
         <!-- /.col-md-4 -->
         <div class="card-footer text-center">
-                <i class="fa fa-hand-o-up"></i>
-                <i class="fa fa-hand-o-left"></i>
-                <i class="fa fa-hand-o-right" ></i>
-                <i class="fa fa-hand-o-down"></i>
-        
+            <pagination-controls (pageChange)="currpage = $event"></pagination-controls>
         </div>
     </div>
     <!--end col 9 -->
@@ -65,16 +30,7 @@
             <div class="card-header">
                 <i class="fa fa-table"></i> DANH MỤC MÔN HỌC
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Lâp trình android nâng cao</li>
-                <li class="list-group-item">Xây dựng trang web</li>
-                <li class="list-group-item">Cơ sở dữ liệu</li>
-                <li class="list-group-item">SQL Server</li>
-                <li class="list-group-item">internet</li>
-                <li class="list-group-item">lập trình hướng đối tượng với java</li>
-                <li class="list-group-item">Lập trình PHP</li>
-                <li class="list-group-item">Điện toán đám mây</li>
-            </ul>
+            <app-dmmh></app-dmmh>
         </div>
     </div>
     <!-- end col-3 -->

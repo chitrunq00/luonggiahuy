@@ -1,26 +1,41 @@
+<div id="dongho"></div>
+
 <div class="card">
     <h5 class="card-header"><i class="fa fa-table"></i>Please answer the following question?</h5>
     <div class="card-body">
+        <div class="questions">
+        </div>
         <div class="row">
-            <div class="questions">
-                trên trời có bao nhiêu vì sao?
+            <div class="col-md-3">
+                <app-dmmh></app-dmmh>
             </div>
-            <hr>
-            <div class="col-8">
-                <input type="radio" aria-label="Radio button for following text input">
-                4 ngôi sao <br>
-                <input type="radio" aria-label="Radio button for following text input">
-                6 ngôi sao <br>
-                <input type="radio" aria-label="Radio button for following text input">
-                vô sô <br>
-                <input type="radio" aria-label="Radio button for following text input">
-                8 ngôi sao<br>
-            </div>
-            <div class="col-4">
-                <img src="assets/images/traidat.jpg" alt="">
-            </div>
+          <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-6">
+                        <div class="noidung" *ngFor='let a of quiz| paginate: { itemsPerPage:1,currentPage:curpage }'>
+                            {{a.Text}} <br>
+                            <ul *ngFor='let f of a.Answers'>
+                                <li>
+                                        <input [(ngModel)]="answer[curpage-1]"name="{{a.Id}}" id="{{f.Id}}" value="{{f.Id}}" class="form-check-input" type="radio">
+                              <label for="{{f.Id}}">  {{f.Text}}</label>         
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>
+                    <div class="col-md-6 imgess">
+                        <img src="assets/images/traidat.jpg" alt="">
+                    </div>
+                  
+                </div>
+                <h5 class="card-footer text-center">
+                        <pagination-controls (pageChange)="curpage = $event"></pagination-controls>
+                    </h5>
+          </div>
         </div>
         <!-- end row -->
+        <h5 class="card-footer text-center">
+            <i class="fa fa-hand-o-right"  ></i>
+        </h5>
     </div>
-    <h5 class="card-footer">đáp án</h5>
+    <h5 class="card-footer">đáp án: {{point}}</h5>
 </div>

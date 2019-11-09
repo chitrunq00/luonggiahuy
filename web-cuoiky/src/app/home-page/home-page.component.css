@@ -1,9 +1,6 @@
 .header img{
     width: 100% !important;
 }
-/* .row{
-    margin-top: 2%;
-} */
 hr {
     width: 70%;
 }
@@ -47,4 +44,13 @@ hr {
 }
 .fa{
     margin: 2%;
+}
+ul a{
+        text-decoration: none;
+}
+ul li:hover{
+   color: #c29541;
+}
+.list-group a{
+    color: #446389;
 }
