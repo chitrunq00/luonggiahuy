@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';//router
 
 import {HttpClientModule} from '@angular/common/http';//get hhtpcline
 import {NgxPaginationModule} from 'ngx-pagination';//phan trang
-import { CountdownModule } from 'ngx-countdown'; //time
+import { CountdownModule } from 'ngx-countdown'; //time hàm chạy thời gian
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -47,7 +47,6 @@ import { DmmhComponent } from './dmmh/dmmh.component';
     NgxPaginationModule,
     AppRoutingModule,
     RouterModule.forRoot([
-     
       { path: '', component: LoginComponent },
       { path: 'home', component: HomePageComponent },
       { path: 'home-page/:mid', component: HomePageComponent },

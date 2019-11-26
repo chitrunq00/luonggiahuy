@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HomepageService } from '../homepage.service';
 import {Student} from '../login/student'
 import {NgForm} from '@angular/forms'
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,9 +19,8 @@ export class LoginComponent implements OnInit {
 	username = "teonv";
 	password = "iloveyou";
 
-  constructor(private _homepage: HomepageService) { }
+  constructor(private _homepage: HomepageService,private router: Router) { }
 
-  
   ngOnInit() {
         this.getUsers();
 		this.userLocal = JSON.parse(localStorage.getItem('users'));
@@ -40,7 +39,6 @@ export class LoginComponent implements OnInit {
 					this.listDataLocal[i].password == formUser.value.password) {
 					this.login.push(this.listDataLocal[i]);				
 					count++;
-					console.log(this.listDataLocal)
 				}
 			}
 			if (count == 0) {
@@ -59,7 +57,6 @@ export class LoginComponent implements OnInit {
 	}
 	checkIn() {
 		let arr = JSON.parse(localStorage.getItem('Login'))
-	
 		if(arr !== null){
 			alert("Vui Lòng Đăng Xuất Tài Khoản")
 			return false;	

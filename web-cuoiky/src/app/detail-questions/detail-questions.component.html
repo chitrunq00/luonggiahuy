@@ -1,5 +1,3 @@
-<div id="dongho"></div>
-
 <div class="card">
     <h5 class="card-header"><i class="fa fa-table"></i>Please answer the following question?</h5>
     <div class="card-body">
@@ -9,33 +7,82 @@
             <div class="col-md-3">
                 <app-dmmh></app-dmmh>
             </div>
-          <div class="col-md-9">
-              <div class="row">
-                <div class="col-md-6">
-                        <div class="noidung" *ngFor='let a of quiz| paginate: { itemsPerPage:1,currentPage:curpage }'>
-                            {{a.Text}} <br>
-                            <ul *ngFor='let f of a.Answers'>
-                                <li>
-                                        <input [(ngModel)]="answer[curpage-1]"name="{{a.Id}}" id="{{f.Id}}" value="{{f.Id}}" class="form-check-input" type="radio">
-                              <label for="{{f.Id}}">  {{f.Text}}</label>         
-                                </li>
-                            </ul> 
+            <div class="col-md-9">
+                <div class="mb-4 text-primary text-center">
+                    <div class="mt-2">
+                        <span class="text-success mr-2">Thời Gian:</span>
+                        <img src="assets/images/dongho.jpg" class="mr-1 pb-2" alt="" style="max-width: 35px">
+                        <span class="bg-black text-center txtshadow text-white " id="timer">60':00</span>
+                        <span *ngIf="showTime" class="show fade ml-4">
+                            <button type="button" class="btn txtshadow btn-sm btn-danger" (click)="startTime()">
+                                BẮT ĐẦU
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="noidung"
+                            *ngFor='let cauhoi of quiz|paginate:{itemsPerPage:rowpage,currentPage:page}'>
+                            <p> {{cauhoi.Text}}</p> <br>
+                            <div *ngFor="let Ans of cauhoi.Answers" class="ml-5 mb-3 text-primary">
+                                <input [(ngModel)]="answers[page-1]" name="{{cauhoi.Id}}" id="{{Ans.Id}}"
+                                    value="{{Ans.Id}}" class="form-check-input" type="radio">
+                                <label for="{{Ans.Id}}">{{Ans.Text}}</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 imgess">
+                    <div class="col-md-6 imgess text-center">
                         <img src="assets/images/traidat.jpg" alt="">
                     </div>
-                  
                 </div>
-                <h5 class="card-footer text-center">
-                        <pagination-controls (pageChange)="curpage = $event"></pagination-controls>
-                    </h5>
-          </div>
+                <h5 class="card-footer">
+                    <div> đáp án: {{tongsocau()}}
+                        <button (click)="endTime()" type="button"
+                            class="mb-2 txtshadow bor btn btn-info float-right border-info">
+                            GỬI BÀI
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <div *ngIf="!onShowPage" class="pagination justify-content-center text-primary my-4">
+                            <i class="disabled btn btn-outline-dark text-muted far fa-hand-point-up"></i>
+                            <i class="disabled btn btn-outline-dark text-muted mx-3 far fa-hand-point-left"></i>
+                            <i class="disabled btn btn-outline-dark text-muted far fa-hand-point-right"></i>
+                            <i class="disabled btn btn-outline-dark text-muted ml-3 far fa-hand-point-down"></i>
+                        </div>
+                        <div *ngIf="onShowPage" class="pagination justify-content-center text-primary my-4">
+                            <i class="disabled btn btn-outline-dark text-muted far fa-hand-point-up"></i>
+                            <i class="disabled btn btn-outline-dark text-muted mx-3 far fa-hand-point-left"></i>
+                            <!-- cong diem -->
+                            <i (click)='nextPage()' (click)="pointTest()"
+                                class="btn btn-outline-info far fa-hand-point-right fa-lg"></i>
+                                <i class="disabled btn btn-outline-dark text-muted ml-3 far fa-hand-point-down"></i>
+                        </div>
+
+                    </div>
+                </h5>
+
+                <div id="result" class="col-md-9 mt-5" style="display: none;">
+                    <table class="table table-striped bgr table-responsive-sm text-primary table-bordered text-center">
+                        <thead class="table-success h5">
+                            <tr>
+
+                                <th scope="col">Điểm Thi</th>
+                                <th scope="col">Thời Gian Làm Bài</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-black h5">
+                                <!-- cho diem qua -->
+                                <td class="align-middle">{{point}}</td>
+                                <td id="timer-2" class="align-middle"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
         <!-- end row -->
-        <h5 class="card-footer text-center">
-            <i class="fa fa-hand-o-right"  ></i>
-        </h5>
     </div>
-    <h5 class="card-footer">đáp án: {{point}}</h5>
 </div>

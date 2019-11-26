@@ -7,6 +7,11 @@ ul {
 .imgess{
     margin: 0 auto;
 }
-/* .noidung{
-    text-align: center;
-} */
+.text-white {
+    color: #624444!important;
+}
+.noidung p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  font-variant-alternates: character-variant();
+}

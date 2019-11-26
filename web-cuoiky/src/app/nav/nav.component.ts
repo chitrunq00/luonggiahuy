@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HomepageService} from '../homepage.service';
-
+import {Route} from '@angular/router'
 
 @Component({
   selector: 'app-nav',
@@ -41,6 +41,7 @@ export class NavComponent implements OnInit {
 		let arr = JSON.parse(localStorage.getItem('Login'));
 		if (arr === null) {
 			alert("Vui Lòng Đăng Nhập Tài Khoản Của Bạn");
+	//	this.route.navigate(["/home"]);
 		}
 	}
 	logout() {

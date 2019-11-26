@@ -1,31 +1,18 @@
-<ul class="breadcrumb font-italic">
-	<li><a [routerLink]="['/trangchu']" class=" text-decoration-none">Trang Chủ /&nbsp; </a></li>
-	<li class="active">Tài Khoản /&nbsp;</li>
-	<li class="active">Đăng Ký</li>
-</ul>
+
 <div class="my-4" [hidden]='_submit'>
 	<form #formUser ="ngForm" (ngSubmit)="onSubmit(formUser)" class="was-validated my-form text-primary" oninput='repass.setCustomValidity(repass.value != password.value ? "Passwords" : "")'>	
-		<h4 class="text-center pt-4 text-primary text-monospace">ĐĂNG KÝ TÀI KHOẢN</h4>
+		<h4 class="text-center pt-4 text-primary text-monospace faaa">Register Account</h4>
 		<hr class="border-info"/> 
 		<div class="form-row">
 			<div class="col-md-2 offset-md-3">
 				<label>Họ Tên:</label>					
 			</div>
+			
 			<div class="form-group col-md-4">					
 				<input [(ngModel)]="fullname" name="fullname" type="text" class="form-control" pattern=".{4,30}" required>
 				<div class="invalid-feedback">Họ tên từ 4-30 kí tự</div>
 			</div>
 		</div>		
-
-		<div class="form-row">
-			<div class="col-md-2 offset-md-3">
-				<label>Ngày Sinh:</label>					
-			</div>
-			<div class="form-group col-md-4">					
-				<input [(ngModel)]="birthday" name="birthday" type="date" class="form-control" required>
-			</div>
-		</div>	
-
 		<div class="form-row">
 			<div class="col-md-2 offset-md-3">
 				<label for="validationServer01">Giới Tính:</label>					
@@ -42,6 +29,14 @@
 			</div>
 		</div> 
 
+		<div class="form-row">
+			<div class="col-md-2 offset-md-3">
+				<label>Ngày Sinh:</label>					
+			</div>
+			<div class="form-group col-md-4">					
+				<input [(ngModel)]="birthday" name="birthday" type="date" class="form-control" required>
+			</div>
+		</div>		
 		<div class="form-row">
 			<div class="col-md-2 offset-md-3">
 				<label>Tên Đăng Nhập:</label>
@@ -95,15 +90,6 @@
 			</div>
 		</div>
 
-		<div class="form-row">
-			<div class="col-md-2 offset-md-3">
-				<label>Học Phí</label>
-			</div>
-			<div class="form-group col-md-4">
-				<input [(ngModel)]="schoolfee" name="schoolfee" type="number" class="form-control" min="0" required>
-			</div>				
-		</div> 
-
 		<div class="form-row sr-only">
 			<div class="col-md-2 offset-md-3">
 				<label>Điểm</label>
@@ -147,7 +133,6 @@
 				<th scope="col">Email</th>
 				<th scope="col">Giới Tính</th>
 				<th scope="col">Năm Sinh</th>
-				<th scope="col">Học Phí</th>
 				<th scope="col">Điểm</th>
 			</tr>
 		</thead>
@@ -159,7 +144,6 @@
 				<td class="align-middle">{{email}}</td>
 				<td class="align-middle">{{gender == "true" ? "Nam":"Nữ"}}</td>
 				<td class="align-middle">{{birthday | date}}</td>
-				<td class="align-middle">{{schoolfee | currency:"VND"}}</td>
 				<td class="align-middle">{{marks}}</td>			
 			</tr>				
 		</tbody>

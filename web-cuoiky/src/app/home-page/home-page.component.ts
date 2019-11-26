@@ -12,9 +12,10 @@ import { shomepage } from './homepages';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
- 
+ //phan trang
   itempage:4;
   currpage:number=1;
+  
   public Subjects:shomepage[];
   Subject:any;
   pid;

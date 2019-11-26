@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { shomepage } from './home-page/homepages';
 import { Student } from './login/student';
+import {Quizs}from './detail-questions/quiz'
 import { Observable } from 'rxjs';
 import { LocalStorageService } from './local-storage.service';
 @Injectable({
@@ -30,8 +31,8 @@ export class HomepageService {
 		return this.http.get<Student[]>(this.urlsutdent)
 	};
 	//get data json of detail subject
-	getAlldetailSubject(Id: string) {
-		return this.http.get(`/assets/db/` + Id + `.json`);
+	getAlldetailSubject(Id: string): Observable<Quizs[]> {
+		return this.http.get<Quizs[]>(`/assets/db/` + Id + `.json`);
 	}
 	loadLocalStorage() {
 		this.students = this.storageService.getValue<Student[]>(this.StudentKey) || [];

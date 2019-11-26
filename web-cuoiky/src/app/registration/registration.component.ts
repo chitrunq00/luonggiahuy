@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit {
 	email: string = "thanhvien1@gmail.com";
 	gender: string = "true";
 	birthday: string = "2000-10-02";
-	schoolfee: number = 5500000;
+	schoolfee: number =0;
 	marks = 0;
 
 	constructor(private _home: HomepageService) { }
