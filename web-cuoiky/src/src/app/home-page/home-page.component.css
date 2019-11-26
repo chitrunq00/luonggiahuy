@@ -1,0 +1,56 @@
+.header img{
+    width: 100% !important;
+}
+hr {
+    width: 70%;
+}
+.col-md-5{
+    margin: 2%;
+    float: left;
+}
+.navbar{
+    margin-top: 1%;
+}
+
+.card-body img {
+    margin-left: 33%;
+}
+.imagess{
+    margin-left: 20% !important;
+}
+
+.card-body h2 {
+    text-align: center;
+}
+.carousel img {
+    width: 30%;
+    margin: auto;
+}
+.carousel-control-prev {
+    background-color:#f8f2f2;
+}
+.carousel-control-next {
+    background-color:#f8f2f2;
+}
+.carousel-inner{
+    margin-bottom: 2%;
+}
+.card-footer{
+    margin: 0 auto;
+}
+.text-center{
+    width: 100%;
+    float: left;
+}
+.fa{
+    margin: 2%;
+}
+ul a{
+        text-decoration: none;
+}
+ul li:hover{
+   color: #c29541;
+}
+.list-group a{
+    color: #446389;
+}
